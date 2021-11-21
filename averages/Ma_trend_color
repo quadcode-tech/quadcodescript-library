@@ -1,0 +1,21 @@
+instrument {
+    overlay = true,
+    name = "MA Trend Color",
+    short_name = "MATC",
+    icon = "indicators:MA"
+}
+period = input (21, "front.period", input.integer, 1)
+source = input (1, "front.ind.source", input.string_selection, inputs.titles_overlay)
+fn     = input (1, "front.newind.average", input.string_selection, averages.titles)
+input_group {
+    "front.ind.dpo.generalline",
+    colorup = input { default = "#0000FF", type = input.color },
+    colordn = input { default = "#FF0000", type = input.color },
+    colorn = input { default = "#FFA07A", type = input.color },
+    width = input { default = 1, type = input.line_width}
+}
+local sourceSeries = inputs [source]
+local averageFunction = averages [fn]
+avrg = averageFunction(sourceSeries, period)
+colors = iff(close > avrg, colorup, iff(close < avrg, colordn, colorn))
+plot(avrg, "Ma Color", colors, width, 0, style.dash_line, na_mode.continue)
