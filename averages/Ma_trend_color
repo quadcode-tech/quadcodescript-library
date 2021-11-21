@@ -11,7 +11,6 @@ input_group {
     "front.ind.dpo.generalline",
     colorup = input { default = "#0000FF", type = input.color },
     colordn = input { default = "#FF0000", type = input.color },
-    colorn = input { default = "#FFA07A", type = input.color },
     width = input { default = 1, type = input.line_width}
 }
 local sourceSeries = inputs [source]
