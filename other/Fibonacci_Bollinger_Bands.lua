@@ -6,7 +6,7 @@ instrument {
 period = input (200, "front.period", input.integer, 1)
 source = input (1, "front.ind.source", input.string_selection, inputs.titles_overlay)
 fn     = input (1, "front.newind.average", input.string_selection, averages.titles)
-devs   = input (2, "Bollinger Dev", input.integer, 1)
+devs   = input (2.3, "front.newind.stddev", input.double, 0.5)
 
 input_group {
     "front.ind.dpo.generalline",
