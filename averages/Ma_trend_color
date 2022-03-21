@@ -16,5 +16,5 @@ input_group {
 local sourceSeries = inputs [source]
 local averageFunction = averages [fn]
 avrg = averageFunction(sourceSeries, period)
-colors = iff(close > avrg, colorup, iff(close < avrg, colordn, colorn))
+colors = iff(close > avrg, colorup, iff(close < avrg, colordn, nil))
 plot(avrg, "Ma Color", colors, width, 0, style.dash_line, na_mode.continue)
