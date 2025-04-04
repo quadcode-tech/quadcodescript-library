@@ -1,12 +1,12 @@
 instrument { name = "KAMA", overlay = true }
 
-local length = input (21, "front.period", input.integer, 1 , 250  )
-local fastMA = input (4,  "front.platform.fast period",   input.integer, 1, 250)
-local slowMA = input (30, "front.platform.slow period",   input.integer, 1, 250)
-local source = input (1,  "front.ind.source", input.string_selection, inputs.titles_overlay)
+local length = input (21, "Period", input.integer, 1 , 250  )
+local fastMA = input (4,  "Fast Period",   input.integer, 1, 250)
+local slowMA = input (30, "Slow Period",   input.integer, 1, 250)
+local source = input (1,  "Source", input.string_selection, inputs.titles_overlay)
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
     color = input { default = "#57A1D0", type = input.color },
     width = input { default = 1, type = input.line_width}
 }

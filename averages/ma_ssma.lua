@@ -1,10 +1,10 @@
 instrument { name = "Smoothed Simple Moving Average", short_name = "SSMA", overlay = true, icon="indicators:MA" }
 
-period = input (7, "front.period", input.integer, 1)
-source = input (1, "front.ind.source", input.string_selection, inputs.titles_overlay)
+period = input (7, "Period", input.integer, 1)
+source = input (1, "Source", input.string_selection, inputs.titles_overlay)
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
     color = input { default = "#DB4931", type = input.color },
     width = input { default = 1, type = input.line_width}
 }
