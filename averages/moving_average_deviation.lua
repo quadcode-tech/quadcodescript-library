@@ -1,12 +1,12 @@
 instrument { name = "Moving Average Deviation", overlay = false, icon="indicators:MA" }
 
-period = input (12, "front.period", input.integer, 1)
+period = input (12, "Period", input.integer, 1)
 
-source = input (1, "front.ind.source", input.string_selection,  inputs.titles)
-fn     = input (1, "front.newind.average", input.string_selection, averages.titles)
+source = input (1, "Source", input.string_selection,  inputs.titles)
+fn     = input (1, "Average", input.string_selection, averages.titles)
 
 input_group {
-    "front.newind.barcolors",
+    "Bar Colors",
     up_color   = input { default = "#2CAC40", type = input.color },
     down_color = input { default = "#DB4931", type = input.color }
 }

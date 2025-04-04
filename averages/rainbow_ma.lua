@@ -1,13 +1,13 @@
 instrument { name = "Rainbow MA", overlay = true }
 
-starting_period = input (2, "front.newind.startingperiod", input.integer, 1, 100)
-bands_count = input (10, "front.newind.bandscount", input.integer, 1, 20)
+starting_period = input (2, "Starting Period", input.integer, 1, 100)
+bands_count = input (10, "Bands Count", input.integer, 1, 20)
 
-source = input (1, "front.ind.source", input.string_selection,  inputs.titles_overlay)
-fn     = input (1, "front.newind.average", input.string_selection, averages.titles)
+source = input (1, "Source", input.string_selection,  inputs.titles_overlay)
+fn     = input (1, "Average", input.string_selection, averages.titles)
 
 input_group {
-    "front.newind.lines",
+    "Lines",
     color1  = input { default = "#FF6C58", type = input.color },
     color2  = input { default = "#DB4931", type = input.color },
     color3  = input { default = "#FF7700", type = input.color },
