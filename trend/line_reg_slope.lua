@@ -1,18 +1,18 @@
 instrument { name = "Linear Regression Slope", overlay = false }
 
-period  = input (14, "front.period", input.integer, 2)
+period  = input (14, "Period", input.integer, 2)
 
-source = input (inputs.close, "front.ind.source", input.string_selection, inputs.titles)
+source = input (inputs.close, "Source", input.string_selection, inputs.titles)
 
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
     color = input { default = "#B42EFF", type = input.color },
     width = input { default = 1, type = input.line_width}
 }
 
 input_group {
-    "front.platform.baseline",
+    "Baseline",
     zero_color  = input { default = rgba(255,255,255,0.15), type = input.color },
     zero_width  = input { default = 1, type = input.line_width}
 }

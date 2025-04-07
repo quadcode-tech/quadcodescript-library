@@ -1,6 +1,6 @@
 instrument { name = "Ehler's Fisher Transform" }
 
-period = input (10, "front.period", input.integer, 3)
+period = input (10, "Period", input.integer, 3)
 
 input_group {
     "EF",

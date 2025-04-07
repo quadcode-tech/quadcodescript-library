@@ -4,10 +4,10 @@ instrument {
 }
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
     long = input (25, "Long", input.integer, 1, 250),
     short = input (13, "Short", input.integer, 1, 250),
-    src_idx = input (inputs.close, "front.ind.source", input.string_selection, inputs.titles),
+    src_idx = input (inputs.close, "Source", input.string_selection, inputs.titles),
 
     osc_color = input { default = "#56CEFF", type = input.color },
     osc_width = input { default = 1, type = input.line_width },
@@ -15,8 +15,8 @@ input_group {
 }
 
 input_group {
-    "front.platform.signal-line",
-    signal_period = input (13, "front.period", input.integer, 1, 250),
+    "Signal Line",
+    signal_period = input (13, "Period", input.integer, 1, 250),
 
     signal_color = input { default = "#FF6C58", type = input.color },
     signal_width = input { default = 1, type = input.line_width },
@@ -24,7 +24,7 @@ input_group {
 }
 
 input_group {
-    "front.platform.baseline",
+    "Baseline",
     zero_line_visible = input { default = true, type = input.plot_visibility },
     zero_line_color   = input { default = rgba(255,255,255,0.15), type = input.color },
     zero_line_width   = input { default = 1, type = input.line_width }
@@ -50,5 +50,5 @@ if osc_visible then
 end
 
 if signal_visible then
-    plot(signal, "front.platform.signal-line", signal_color, signal_width)
+    plot(signal, "Signal Line", signal_color, signal_width)
 end

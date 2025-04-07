@@ -1,8 +1,8 @@
 instrument { name = "Vortex Indicator" }
 
 input_group {
-    "front.ind.dpo.generalline",
-    period = input (14, "front.period", input.integer, 1),
+    "General Line",
+    period = input (14, "Period", input.integer, 1),
 
     p_color  = input { default = "#56CEFF", type = input.color },
     m_color  = input { default = "#B42EFF", type = input.color },
@@ -11,9 +11,9 @@ input_group {
 }
 
 input_group {
-    "front.newind.supportlines",
-    overbought = input (1.1, "front.overbought", input.double, 0, 100, 1, false),
-    oversold   = input (0.9, "front.oversold",   input.double, 0, 100, 1, false),
+    "Support Lines",
+    overbought = input (1.1, "Overbought", input.double, 0, 100, 1, false),
+    oversold   = input (0.9, "Oversold",   input.double, 0, 100, 1, false),
 
     overbought_color  = input { default = rgba(37,225,84,0.50), type = input.color },
     oversold_color  = input { default = rgba(255,108,88,0.50), type = input.color },

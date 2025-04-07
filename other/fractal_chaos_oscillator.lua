@@ -1,13 +1,13 @@
 instrument { name = "Fractal Chaos Oscillator", overlay = false }
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
     color = input { default = "#DB4931", type = input.color },
     width = input { default = 1, type = input.line_width}
 }
 
 input_group {
-    "front.platform.baseline",
+    "Baseline",
     zero_color  = input { default = rgba(255,255,255,0.15), type = input.color },
     zero_width  = input { default = 1, type = input.line_width}
 }

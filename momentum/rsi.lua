@@ -2,18 +2,18 @@ instrument { name = "RSI", icon="indicators:RSI" }
 
 input_group {
     "RSI",
-    period = input (14, "front.period", input.integer, 1),
-    source = input (1, "front.ind.source", input.string_selection, inputs.titles),
-    fn     = input (averages.ssma, "front.newind.average", input.string_selection, averages.titles),
+    period = input (14, "Period", input.integer, 1),
+    source = input (1, "Source", input.string_selection, inputs.titles),
+    fn     = input (averages.ssma, "Average", input.string_selection, averages.titles),
 
     color  = input { default = "#B42EFF", type = input.color },
     width  = input { default = 1, type = input.line_width}
 }
 
 input_group {
-    "front.newind.supportlines",
-    overbought = input (70, "front.overbought", input.double, 1, 100, 1, false),
-    oversold = input (30, "front.oversold", input.double, 1, 100, 1, false),
+    "Support Lines",
+    overbought = input (70, "Overbought", input.double, 1, 100, 1, false),
+    oversold = input (30, "Oversold", input.double, 1, 100, 1, false),
 
     overbought_color  = input { default = rgba(37,225,84,0.50), type = input.color },
     oversold_color  = input { default = rgba(255,108,88,0.50), type = input.color },

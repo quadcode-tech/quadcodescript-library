@@ -2,7 +2,7 @@
 
 instrument { name = "Shinohara Intensity Ratio" }
 
-period = input (26, "front.period", input.integer, 1)
+period = input (26, "Period", input.integer, 1)
 
 input_group {
     "Energy Line",

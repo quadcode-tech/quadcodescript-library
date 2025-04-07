@@ -1,19 +1,19 @@
 instrument { name = "Elder Ray Index" }
 
-period = input (13, "front.period", input.integer, 1)
+period = input (13, "Period", input.integer, 1)
 
 local wide_rect = 0.85
 local narrow_rect = 0.65
 
 input_group {
-    "front.newind.barcolors",
+    "Bar Colors",
 
     bull_color = input { default = "#2CAC40",   type = input.color },
     bear_color = input { default = "#DB4931",   type = input.color }
 }
 
 input_group {
-    "front.platform.baseline",
+    "Baseline",
 
     zero_color = input { default = rgba(255,255,255,0.15), type = input.color },
     zero_width = input { default = 1, type = input.line_width }

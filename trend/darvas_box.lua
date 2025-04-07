@@ -2,16 +2,16 @@
 
 instrument { name = "Darvas Box", overlay=true }
 
-boxp=input (5, "front.newind.darvasbox.length", input.integer, 3)
+boxp=input (5, "Length", input.integer, 3)
 
 input_group {
-    "front.newind.darvasbox.top",
+    "Top",
     top_color = input { default = "#25E154", type = input.color },
     top_width = input { default = 1, type = input.line_width}
 }
 
 input_group {
-    "front.newind.darvasbox.bottom",
+    "Bottom",
     bottom_color = input { default = "#FF6C58", type = input.color },
     bottom_width = input { default = 1, type = input.line_width}
 }

@@ -1,17 +1,17 @@
 instrument { name = "Rate of Change", overlay = false }
 
-period = input (9, "front.period", input.integer, 1)
+period = input (9, "Period", input.integer, 1)
 
-source = input (1, "front.ind.source", input.string_selection,  inputs.titles)
+source = input (1, "Source", input.string_selection,  inputs.titles)
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
     color = input { default = "#57A1D0", type = input.color },
     width = input { default = 1, type = input.line_width}
 }
 
 input_group {
-    "front.platform.baseline",
+    "Baseline",
 
     zero_color = input { default = rgba(255,255,255,0.15), type = input.color },
     zero_width = input { default = 1, type = input.line_width },

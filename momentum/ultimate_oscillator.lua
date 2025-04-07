@@ -5,15 +5,15 @@ period2 = input (14, "Period 2", input.integer,  1)
 period3 = input (28, "Period 3", input.integer,  1)
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
     color = input { default = "#DB4931", type = input.color },
     width = input { default = 1, type = input.line_width}
 }
 
 input_group {
-    "front.newind.supportlines",
-    overbought = input (70, "front.overbought", input.double, 1, 100, 1, false),
-    oversold = input (30, "front.oversold", input.double, 0, 100, 1, false),
+    "Support Lines",
+    overbought = input (70, "Overbought", input.double, 1, 100, 1, false),
+    oversold = input (30, "Oversold", input.double, 0, 100, 1, false),
 
     overbought_color  = input { default = rgba(37,225,84,0.50), type = input.color },
     oversold_color  = input { default = rgba(255,108,88,0.50), type = input.color },

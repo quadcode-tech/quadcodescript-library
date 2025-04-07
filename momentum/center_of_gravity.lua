@@ -1,6 +1,6 @@
 instrument { name = "Center of Gravity" }
 
-period = input (10, "front.period", input.integer, 1, 200)
+period = input (10, "Period", input.integer, 1, 200)
 
 input_group {
     "CoG",

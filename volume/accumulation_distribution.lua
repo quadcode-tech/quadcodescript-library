@@ -1,7 +1,7 @@
 instrument { name = "Accumulation/Distribution", overlay = false }
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
     color = input { default = "#DBCF0D", type = input.color },
     width = input { default = 1, type = input.line_width}
 }

@@ -2,16 +2,16 @@ instrument { name = "Commodity Channel Index", icon = "indicators:CCI" }
 
 input_group {
     "Commodity Channel Index",
-    period = input (20, "front.period", input.double, 1),
+    period = input (20, "Period", input.double, 1),
 
     color  = input { default = "#FBE90C", type = input.color },
     width  = input { default = 1, type = input.line_width}
 }
 
 input_group {
-    "front.newind.supportlines",
-    overbought = input (100, "front.overbought", input.double, -200, 200, 1, false),
-    oversold = input (-100, "front.oversold", input.double, -200, 200, 1, false),
+    "Support Lines",
+    overbought = input (100, "Overbought", input.double, -200, 200, 1, false),
+    oversold = input (-100, "Oversold", input.double, -200, 200, 1, false),
 
     overbought_color  = input { default = rgba(37,225,84,0.50), type = input.color },
     oversold_color  = input { default = rgba(255,108,88,0.50), type = input.color },

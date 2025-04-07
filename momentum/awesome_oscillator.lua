@@ -1,16 +1,16 @@
 instrument { name = "Awesome Oscillator", overlay = false }
 
-fast = input (5, "front.platform.fast period", input.integer, 1, 250)
-slow = input (34, "front.platform.slow period", input.integer, 1, 250)
+fast = input (5, "Fast Period", input.integer, 1, 250)
+slow = input (34, "Slow Period", input.integer, 1, 250)
 
 input_group {
-    "front.newind.barcolors",
+    "Bar Colors",
     up_color   = input { default = "#2CAC40", type = input.color },
     down_color = input { default = "#DB4931", type = input.color }
 }
 
 input_group {
-    "front.platform.baseline",
+    "Baseline",
     zero_color = input { default = rgba(255,255,255,0.15), type = input.color },
     zero_width = input { default = 1, type = input.line_width },
     zero_visible = input { default = true, type = input.plot_visibility }

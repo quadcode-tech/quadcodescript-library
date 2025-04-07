@@ -1,25 +1,24 @@
 instrument { name = "Pretty Good Oscillator" }
 
-period = input (14, "front.period", input.integer, 2)
+period = input (14, "Period", input.integer, 2)
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
     color = input { default = "#21B190", type = input.color },
     width = input { default = 1, type = input.line_width}
 }
 
 input_group {
-    "front.platform.baseline",
-
+    "Baseline",
     zero_color = input { default = rgba(255,255,255,0.15), type = input.color },
     zero_width = input { default = 1, type = input.line_width },
     zero_visible = input { default = true, type = input.plot_visibility }
 }
 
 input_group {
-    "front.newind.supportlines",
-    overbought = input (2, "front.overbought", input.double, 0, 100, 1, false),
-    oversold = input (-2, "front.oversold", input.double, -100, 0, 1, false),
+    "Support Lines",
+    overbought = input (2, "Overbought", input.double, 0, 100, 1, false),
+    oversold = input (-2, "Oversold", input.double, -100, 0, 1, false),
 
     overbought_color  = input { default = rgba(37,225,84,0.50), type = input.color },
     oversold_color  = input { default = rgba(255,108,88,0.50), type = input.color },

@@ -1,11 +1,11 @@
 instrument { name = "Historical Volatility", overlay = false }
 
-period = input (10, "front.period", input.integer, 1)
-annual = input (252, "front.newind.daysperyear", input.integer, 1, 366)
-source = input (1, "front.ind.source", input.string_selection, inputs.titles)
+period = input (10, "Period", input.integer, 1)
+annual = input (252, "Days per Year", input.integer, 1, 366)
+source = input (1, "Source", input.string_selection, inputs.titles)
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
     color   = input { default = "#56CEFF", type = input.color },
     width   = input { default = 1, type = input.line_width }
 }

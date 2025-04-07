@@ -1,46 +1,46 @@
 instrument { name = "Ichimoku Clouds", overlay = true, icon = "indicators:Ichimoku" }
 
 input_group {
-    "front.newind.ichi.tenkan",
-    tenkan_period = input (9, "front.period", input.integer, 1),
+    "Tenkan",
+    tenkan_period = input (9, "Period", input.integer, 1),
     tenkan_color = input { default = rgba(86,206,255,0.7), type = input.color },
     tenkan_width = input { default = 1, type = input.line_width },
     tenkan_visible = input { default = true, type = input.plot_visibility }
 }
 
 input_group {
-    "front.newind.ichi.kijun",
-    kijun_period = input (26, "front.period", input.integer, 1),
+    "Kijun",
+    kijun_period = input (26, "Period", input.integer, 1),
     kijun_color = input { default = rgba(183,36,17,0.7), type = input.color },
     kijun_width = input { default = 1, type = input.line_width },
     kijun_visible = input { default = true, type = input.plot_visibility }
 }
 
 input_group {
-    "front.newind.ichi.senkoua",
+    "Senkou A",
     senkou_span_a_color = input { default = rgba(37,225,84,0.7), type = input.color },
     senkou_span_a_width = input { default = 1, type = input.line_width },
     senkou_span_a_visible = input { default = true, type = input.plot_visibility }
 }
 
 input_group {
-    "front.newind.ichi.senkoub",
-    senkou_span_b_period = input (52, "front.period", input.integer, 1),
+    "Senkou B",
+    senkou_span_b_period = input (52, "Period", input.integer, 1),
     senkou_span_b_color = input { default = rgba(255,108,88,0.7), type = input.color },
     senkou_span_b_width = input { default = 1, type = input.line_width },
     senkou_span_b_visible = input { default = true, type = input.plot_visibility }
 }
 
 input_group {
-    "front.ind.ichi.chikou.namefull",
-    chikou_span_period = input (26, "front.period", input.integer, 1),
+    "Chikou",
+    chikou_span_period = input (26, "Period", input.integer, 1),
     chikou_span_color = input { default = "#187226", type = input.color },
     chikou_span_width = input { default = 1, type = input.line_width },
     chikou_span_visible = input { default = true, type = input.plot_visibility }
 }
 
 input_group {
-    "front.ind.ichi.cloudfill",
+    "Cloud Fill",
     senkou_fill_a_color = input { default = rgba(37,225,84,0.15), type = input.color },
     senkou_fill_b_color = input { default = rgba(255,108,88,0.15), type = input.color },
     senkou_fill_visible = input { default = true, type = input.plot_visibility }

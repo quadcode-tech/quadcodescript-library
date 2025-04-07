@@ -1,17 +1,17 @@
 instrument { name = "Choppiness Index" }
 
 input_group {
-    "front.ind.dpo.generalline",
-    period = input (14, "front.period", input.double, 1),
+    "General Line",
+    period = input (14, "Period", input.double, 1),
 
     color  = input { default = "#57A1D0", type = input.color },
     width  = input { default = 1, type = input.line_width}
 }
 
 input_group {
-    "front.newind.supportlines",
-    overbought = input (61.8, "front.overbought", input.double, 1, 100, 1, false),
-    oversold = input (38.2, "front.oversold", input.double, 1, 100, 1, false),
+    "Support Lines",
+    overbought = input (61.8, "Overbought", input.double, 1, 100, 1, false),
+    oversold = input (38.2, "Oversold", input.double, 1, 100, 1, false),
 
     overbought_color  = input { default = rgba(37,225,84,0.50), type = input.color },
     oversold_color  = input { default = rgba(255,108,88,0.50), type = input.color },

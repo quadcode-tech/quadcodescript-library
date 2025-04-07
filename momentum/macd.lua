@@ -6,9 +6,9 @@ instrument {
 
 input_group {
     "MACD",
-    "front.newind.macd.slowfast-hint",
-    fast = input (12, "front.platform.fast period", input.integer, 1, 250),
-    slow = input (26, "front.platform.fast period", input.integer, 1, 250),
+    "MACD Slow-Fast Hint",
+    fast = input (12, "Fast Period", input.integer, 1, 250),
+    slow = input (26, "Slow Period", input.integer, 1, 250),
 
     macd_color = input { default = "#2384C2", type = input.color },
     macd_width = input { default = 1, type = input.line_width },
@@ -16,9 +16,9 @@ input_group {
 }
 
 input_group {
-    "front.platform.signal-line",
-    "front.newind.macd.signal-hint",
-    signal_period = input (9, "front.period", input.integer, 1, 250),
+    "Signal Line",
+    "MACD Signal Hint",
+    signal_period = input (9, "Period", input.integer, 1, 250),
 
     signal_color = input { default = "#FF7700", type = input.color },
     signal_width = input { default = 1, type = input.line_width },
@@ -26,14 +26,14 @@ input_group {
 }
 
 input_group {
-    "front.platform.baseline",
+    "Baseline",
     zero_line_visible = input { default = true, type = input.plot_visibility },
     zero_line_color   = input { default = rgba(255,255,255,0.15), type = input.color },
     zero_line_width   = input { default = 1, type = input.line_width }
 }
 
 input_group {
-    "front.newind.barcolors",
+    "Bar Colors",
     histogram_visible = input { default = true, type = input.plot_visibility },
     histogram_up_color   = input { default = "#2CAC40", type = input.color },
     histogram_down_color   = input { default = "#DB4931", type = input.color }
@@ -53,7 +53,7 @@ if macd_visible then
 end
 
 if signal_visible then
-    plot(signal, "front.platform.signal-line", signal_color, signal_width)
+    plot(signal, "Signal Line", signal_color, signal_width)
 end
 
 if histogram_visible then

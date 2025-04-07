@@ -1,8 +1,8 @@
 instrument { name = "ADX/DMS", icon="indicators:ADX" }
 
-adx_period = input (14, "front.newind.adx.smoothing", input.integer, 1)
-di_period = input (14, "front.newind.adx.dilength", input.integer, 1)
-threshold  = input (20, "front.newind.adx.threshold", input.double, 0, 100)
+adx_period = input (14, "ADX Smoothing", input.integer, 1)
+di_period = input (14, "ADX DI Length", input.integer, 1)
+threshold  = input (20, "ADX Threshold", input.double, 0, 100)
 
 input_group {
     "ADX",
@@ -26,14 +26,14 @@ input_group {
 }
 
 input_group {
-    "front.newind.adx.threshold",
+    "Threshold",
     threshold_color = input { default = rgba(255,255,255,0.15), type = input.color },
     threshold_width = input { default = 1, type = input.line_width },
     threshold_visible = input { default = true, type = input.plot_visibility }
 }
 
 input_group {
-    "front.newind.adx.fill",
+    "ADX Fill",
     up_color = input { default = rgba(37,225,84,0.15), type = input.color },
     down_color = input { default = rgba(255,108,88,0.15), type = input.color },
     fill_visible = input { default = true, type = input.plot_visibility }

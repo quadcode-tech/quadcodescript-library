@@ -5,23 +5,23 @@ instrument {
 input_group {
     "MACD",
     "Slow and fast EMA periods, used in MACD calculation",
-    fast = input (12, "front.platform.fast period", input.integer, 1, 250),
-    slow = input (26, "front.platform.fast period", input.integer, 1, 250)
+    fast = input (12, "Fast Period", input.integer, 1, 250),
+    slow = input (26, "Slow Period", input.integer, 1, 250)
 }
 
 input_group {
-    "front.platform.signal-line",
+    "Signal Line",
     "Reference signal series period",
-    signal_period = input (9, "front.period", input.integer, 1, 250)
+    signal_period = input (9, "Period", input.integer, 1, 250)
 }
 
 input_group {
-    "front.newind.emaperiod",
-    ema_period = input (13, "front.period", input.integer, 1, 250)
+    "EMA Period",
+    ema_period = input (13, "Period", input.integer, 1, 250)
 }
 
 input_group {
-    "front.newind.barcolors",
+    "Bar Colors",
     positive = input { default = "#2CAC40",   type = input.color },
     neutral  = input { default = "#C7CAD1", type = input.color },
     negative = input { default = "#DB4931",   type = input.color },

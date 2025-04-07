@@ -1,11 +1,11 @@
 instrument { name = "Linear Regression R2", overlay = false }
 
-period  = input (14, "front.period", input.integer, 3)
+period  = input (14, "Period", input.integer, 3)
 
-source = input (inputs.close, "front.ind.source", input.string_selection, inputs.titles)
+source = input (inputs.close, "Source", input.string_selection, inputs.titles)
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
     color = input { default = "#B42EFF", type = input.color },
     width = input { default = 1, type = input.line_width}
 }

@@ -9,7 +9,8 @@ local isOscillating = input(false, "Oscillating", input.boolean)
 local normalize     = input(false, "Normalize", input.boolean)
 
 input_group {
-    "front.newind.barcolors",
+    "Bar Colors",
+    
     up_color   = input { default = "#2CAC40", type = input.color },
     down_color = input { default = "#DB4931", type = input.color }
 }

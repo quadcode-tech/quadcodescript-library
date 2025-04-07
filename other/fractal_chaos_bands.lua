@@ -29,21 +29,21 @@ local function low_fractal ()
 end
 
 input_group {
-    "front.platform.chart.high",
+    "Chart High",
     high_color = input { default = "#25E154", type = input.color },
     high_width = input { default = 1, type = input.line_width },
     high_visible = input { default = true, type = input.plot_visibility }
 }
 
 input_group {
-    "front.platform.chart.low",
+    "Chart Low",
     low_color = input { default = "#FF6C58", type = input.color },
     low_width = input { default = 1, type = input.line_width },
     low_visible = input { default = true, type = input.plot_visibility }
 }
 
 input_group {
-    "front.newind.adx.fill",
+    "ADX Fill",
     fill_color = input { default = rgba(87,161,208,0.15), type = input.color },
     fill_visible = input { default = true, type = input.plot_visibility }
 }

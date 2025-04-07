@@ -3,8 +3,9 @@ instrument {
 }
 
 input_group {
-    "front.ind.dpo.generalline",
-    period = input (10, "front.period", input.integer, 1, 250),
+    "General Line",
+    
+    period = input (10, "Period", input.integer, 1, 250),
 
     rvi_color = input { default = "#56CEFF", type = input.color },
     rvi_width = input { default = 1, type = input.line_width },
@@ -12,7 +13,7 @@ input_group {
 }
 
 input_group {
-    "front.platform.signal-line",
+    "Signal Line",
 
     signal_color = input { default = "#DBCF0D", type = input.color },
     signal_width = input { default = 1, type = input.line_width },
@@ -20,7 +21,7 @@ input_group {
 }
 
 input_group {
-    "front.platform.baseline",
+    "Baseline",
 
     zero_line_visible = input { default = true, type = input.plot_visibility },
     zero_line_color   = input { default = rgba(255,255,255,0.15), type = input.color },
@@ -28,7 +29,7 @@ input_group {
 }
 
 input_group {
-    "front.newind.barcolors",
+    "Bar Colors",
 
     histogram_visible = input { default = true, type = input.plot_visibility },
     histogram_up_color   = input { default = "#2CAC40", type = input.color },
@@ -53,7 +54,7 @@ if rvi_visible then
 end
 
 if signal_visible then
-    plot(signal, "front.platform.signal-line", signal_color, signal_width)
+    plot(signal, "Signal Line", signal_color, signal_width)
 end
 
 if histogram_visible then

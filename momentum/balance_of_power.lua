@@ -1,10 +1,10 @@
 instrument { name = "Balance of Power" }
 
 input_group {
-    "front.newind.balanceofpower.smoothed",
+    "Balance of Power Smoothed",
 
-    period = input (14, "front.period", input.integer, 1, 200),
-    fn     = input (1,  "front.newind.average", input.string_selection, averages.titles),
+    period = input (14, "Period", input.integer, 1, 200),
+    fn     = input (1,  "Average", input.string_selection, averages.titles),
 
     smoothed_color = input { default = "#57A1D0", type = input.color },
     smoothed_width = input { default = 1, type = input.line_width },
@@ -12,7 +12,7 @@ input_group {
 }
 
 input_group {
-    "front.newind.barcolors",
+    "Bar Colors",
     negative = input { default = "#DB4931",   type = input.color },
     neutral  = input { default = "#FF7700", type = input.color },
     positive = input { default = "#2CAC40",   type = input.color },
@@ -20,7 +20,7 @@ input_group {
 }
 
 input_group {
-    "front.platform.baseline",
+    "Baseline",
     zero_color = input { default = rgba(255,255,255,0.15), type = input.color },
     zero_width = input { default = 1, type = input.line_width },
     zero_visible = input { default = true, type = input.plot_visibility }

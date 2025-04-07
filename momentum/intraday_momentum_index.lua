@@ -1,17 +1,17 @@
 instrument { name = "Intraday Momentum Index", overlay = false }
 
-period = input (20, "front.period", input.integer, 1   )
+period = input (20, "Period", input.integer, 1   )
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
     color = input { default = "#DBCF0D", type = input.color },
     width = input { default = 1, type = input.line_width}
 }
 
 input_group {
-    "front.newind.supportlines",
-    overbought = input (70, "front.overbought", input.double, 1, 100, 1, false),
-    oversold = input (30, "front.oversold", input.double, 1, 100, 1, false),
+    "Support Lines",
+    overbought = input (70, "Overbought", input.double, 1, 100, 1, false),
+    oversold = input (30, "Oversold", input.double, 1, 100, 1, false),
 
     overbought_color  = input { default = rgba(37,225,84,0.50), type = input.color },
     oversold_color  = input { default = rgba(255,108,88,0.50), type = input.color },
