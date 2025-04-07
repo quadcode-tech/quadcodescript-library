@@ -1,12 +1,12 @@
 instrument { name = "ATR Trailing Stops", overlay = true, icon="indicators:ATR" }
 
-period = input (14, "front.period", input.integer, 1   )
-multiplier  = input (2, "front.newind.multiplier", input.double, 1   )
+period = input (14, "Period", input.integer, 1   )
+multiplier  = input (2, "Multiplier", input.double, 1   )
 
 high_low = input (false, "HighLow", input.boolean)
 
 input_group {
-    "front.newind.colors",
+    "Colors",
     up   = input { default = "#2CAC40", type = input.color },
     down = input { default = "#DB4931", type = input.color },
     width = input { default = 1, type = input.line_width }

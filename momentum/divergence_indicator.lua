@@ -1,12 +1,12 @@
 instrument { name="Divergence Indicator" }
 
-ma_period = input (14, "front.period", input.integer, 1)
-src_idx = input (inputs.close, "front.ind.source", input.string_selection, inputs.titles)
+ma_period = input (14, "Period", input.integer, 1)
+src_idx = input (inputs.close, "Source", input.string_selection, inputs.titles)
 
-bullish_n_color = input ("#2CAC40", "front.newind.divergence.normalbullish", input.color)
-bullish_h_color = input ("#2CAC40", "front.newind.divergence.hiddenbullish", input.color)
-bearish_n_color = input ("#DB4931", "front.newind.divergence.normalbearish", input.color)
-bearish_h_color = input ("#DB4931", "front.newind.divergence.hiddenbearish", input.color)
+bullish_n_color = input ("#2CAC40", "Divergence Normal Bullish", input.color)
+bullish_h_color = input ("#2CAC40", "Divergence Hidden Bullish", input.color)
+bearish_n_color = input ("#DB4931", "Divergence Normal Bearish", input.color)
+bearish_h_color = input ("#DB4931", "Divergence Hidden Bearish", input.color)
 
 osc = rsi (inputs [src_idx], ma_period)
 

@@ -2,24 +2,25 @@ instrument { name = "Price Momentum Oscillator" }
 
 input_group {
     "PMO",
-    smooth = input (35, "front.newind.smoothingperiod", input.integer, 1),
-    dsmooth = input (20, "front.newind.doublesmoothingperiod", input.integer, 1),
-    source = input (1, "front.ind.source", input.string_selection,  inputs.titles),
+    
+    smooth = input (35, "Smoothing Period", input.integer, 1),
+    dsmooth = input (20, "Double Smoothing Period", input.integer, 1),
+    source = input (1, "Source", input.string_selection,  inputs.titles),
 
     pmo_color  = input { default = "#DB4931", type = input.color },
     pmo_width  = input { default = 1, type = input.line_width}
 }
 
 input_group {
-    "front.platform.signal-line",
-    signal_period = input (10, "front.period", input.integer, 1),
+    "Signal Line",
 
+    signal_period = input (10, "Period", input.integer, 1),
     signal_color  = input { default = "#2CAC40", type = input.color },
     signal_width  = input { default = 1, type = input.line_width}
 }
 
 input_group {
-    "front.platform.baseline",
+    "Baseline",
 
     zero_color = input { default = rgba(255,255,255,0.15), type = input.color },
     zero_width = input { default = 1, type = input.line_width },
@@ -40,4 +41,4 @@ if zero_visible then
 end
 
 plot (pmo, "PMO", pmo_color, pmo_width)
-plot (signal, "front.platform.signal-line", signal_color, signal_width)
+plot (signal, "Signal Line", signal_color, signal_width)

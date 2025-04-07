@@ -1,10 +1,10 @@
 instrument { name = "ATR", overlay = false, icon="indicators:ATR" }
 
-period = input (14, "front.period", input.integer, 1   )
-fn     = input (averages.ssma, "front.newind.average", input.string_selection, averages.titles)
+period = input (14, "Period", input.integer, 1   )
+fn     = input (averages.ssma, "Average", input.string_selection, averages.titles)
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
     color = input { default = "#56CEFF", type = input.color },
     width = input { default = 1, type = input.line_width}
 }

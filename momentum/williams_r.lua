@@ -2,16 +2,16 @@ instrument { name = "Williams %R" }
 
 input_group {
     "%R",
-    k_period = input (14, "front.period", input.integer, 1),
+    k_period = input (14, "Period", input.integer, 1),
 
     k_color  = input { default = "#56CEFF", type = input.color },
     k_width  = input { default = 1, type = input.line_width}
 }
 
 input_group {
-    "front.newind.supportlines",
-    overbought = input (-20, "front.overbought", input.double, -100, 0, 1, false),
-    oversold = input (-80, "front.oversold", input.double, -100, 0, 1, false),
+    "Support Lines",
+    overbought = input (-20, "Overbought", input.double, -100, 0, 1, false),
+    oversold = input (-80, "Oversold", input.double, -100, 0, 1, false),
 
     overbought_color  = input { default = rgba(37,225,84,0.50), type = input.color },
     oversold_color  = input { default = rgba(255,108,88,0.50), type = input.color },

@@ -4,7 +4,7 @@
 
 instrument { name = "Random Walk Index" }
 
-period = input (14, "front.period", input.integer, 2)
+period = input (14, "Period", input.integer, 2)
 
 input_group {
     "RWI of High",

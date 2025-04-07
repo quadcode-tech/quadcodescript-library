@@ -1,10 +1,10 @@
 instrument { name = "Linear Regression Forecast", overlay = true }
 
-period = input (14,"front.period", input.integer,  2)
-source = input (1, "front.ind.source", input.string_selection, inputs.titles_overlay)
+period = input (14,"Period", input.integer,  2)
+source = input (1, "Source", input.string_selection, inputs.titles_overlay)
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
     color = input { default = "#FF6C58", type = input.color },
     width = input { default = 1, type = input.line_width}
 }

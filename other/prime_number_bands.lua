@@ -1,21 +1,21 @@
 instrument { name = "Prime Number Bands", overlay = true }
 
 input_group {
-    "front.top line",
+    "Top Line",
     upper_color = input { default = "#25E154", type = input.color },
     upper_width = input { default = 2, type = input.line_width },
     upper_visible = input { default = true, type = input.plot_visibility }
 }
 
 input_group {
-    "front.bottom line",
+    "Bottom Line",
     lower_color = input { default = "#FF6C58", type = input.color },
     lower_width = input { default = 2, type = input.line_width },
     lower_visible = input { default = true, type = input.plot_visibility }
 }
 
 input_group {
-    "front.newind.adx.fill",
+    "ADX Fill",
     fill_color = input { default = rgba(255,108,88,0.15), type = input.color },
     fill_visible = input { default = true, type = input.plot_visibility }
 }

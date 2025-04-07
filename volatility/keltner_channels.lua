@@ -1,33 +1,33 @@
 instrument { name = "Keltner Channels", overlay = true }
 
-period = input (20, "front.period", input.integer, 1)
-shift =  input (5,  "front.newind.offset", input.double, 0.01, 300, 0.01)
+period = input (20, "Period", input.integer, 1)
+shift =  input (5,  "Offset", input.double, 0.01, 300, 0.01)
 
-fn     = input (averages.ema, "front.newind.average", input.string_selection, averages.titles)
+fn     = input (averages.ema, "Average", input.string_selection, averages.titles)
 
 input_group {
-    "front.top line",
+    "Top Line",
     upper_line_visible = input { default = true, type = input.plot_visibility },
     upper_line_color   = input { default = "#21B190", type = input.color },
     upper_line_width   = input { default = 1, type = input.line_width }
 }
 
 input_group {
-    "front.middle line",
+    "Middle Line",
     middle_line_visible = input { default = true, type = input.plot_visibility },
     middle_line_color   = input { default = rgba(33,177,144,0.6), type = input.color },
     middle_line_width   = input { default = 1, type = input.line_width }
 }
 
 input_group {
-    "front.bottom line",
+    "Bottom Line",
     lower_line_visible = input { default = true, type = input.plot_visibility },
     lower_line_color   = input { default = "#21B190", type = input.color },
     lower_line_width   = input { default = 1, type = input.line_width }
 }
 
 input_group {
-    "front.newind.adx.fill",
+    "ADX Fill",
     fill_visible = input { default = true, type = input.plot_visibility },
     fill_color   = input { default = rgba(33,177,144,0.08), type = input.color },
 }

@@ -5,7 +5,7 @@ instrument { name = "Special K" }
 
 input_group {
     "Special K",
-    mode = input (1, "front.newind.mode", input.string_selection, { "Daily", "Weekly" }),
+    mode = input (1, "Mode", input.string_selection, { "Daily", "Weekly" }),
 
     k_color = input { default = "#FF7700", type = input.color },
     k_width = input { default = 1, type = input.line_width },
@@ -13,7 +13,7 @@ input_group {
 }
 
 input_group {
-    "front.platform.smothing",
+    "Smoothing",
     internal_period = input (100, "Period 1", input.integer, 2),
     external_period = input (100, "Period 2", input.integer, 2),
 

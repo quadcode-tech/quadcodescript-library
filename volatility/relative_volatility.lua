@@ -1,20 +1,20 @@
 instrument { name = "Relative Volatility" }
 
 input_group {
-    "front.ind.dpo.generalline",
-    stdev_period = input (10, "front.newind.stddev", input.double, 1),
-    avg_period = input (14, "front.newind.smoothingperiod", input.double, 1),
-    source = input (1, "front.ind.source", input.string_selection, inputs.titles),
-    fn     = input (averages.ema, "front.newind.smoothingfunction", input.string_selection, averages.titles),
+    "General Line",
+    stdev_period = input (10, "Standard Deviation", input.double, 1),
+    avg_period = input (14, "Smoothing Period", input.double, 1),
+    source = input (1, "Source", input.string_selection, inputs.titles),
+    fn     = input (averages.ema, "Smoothing Function", input.string_selection, averages.titles),
 
     color  = input { default = "#2CAC40", type = input.color },
     width  = input { default = 1, type = input.line_width}
 }
 
 input_group {
-    "front.newind.supportlines",
-    overbought = input (70, "front.overbought", input.double, 1, 100, 1, false),
-    oversold = input (30, "front.oversold", input.double, 1, 100, 1, false),
+    "Support Lines",
+    overbought = input (70, "Overbought", input.double, 1, 100, 1, false),
+    oversold = input (30, "Oversold", input.double, 1, 100, 1, false),
 
     zero_color = input { default = rgba(255,255,255,0.15), type = input.color },
     overbought_color  = input { default = rgba(37,225,84,0.50), type = input.color },

@@ -1,41 +1,41 @@
 instrument { name = "Belkhayate Timing", short_name = "BT" }
 
-period = input (34, "front.period", input.integer, 1)
-range1 = input (4, "front.newind.range1", input.integer, 1)
-range2 = input (8, "front.newind.range2", input.integer, 1)
+period = input (34, "Period", input.integer, 1)
+range1 = input (4, "Range 1", input.integer, 1)
+range2 = input (8, "Range 2", input.integer, 1)
 
-show_hlc = input (false, "front.newind.smoothoscillator", input.boolean)
+show_hlc = input (false, "Smoothing Oscillator", input.boolean)
 
 input_group {
-    "front.newind.oscillator",
+    "Oscillator",
     oscillator_color = input { default = rgba(255,255,255,0.5), type=input.color },
     oscillator_width = input { default = 1, type=input.line_width },
     oscillator_visible = input { default = false, type=input.plot_visibility }
 }
 
 input_group {
-    "front.ind.belk.style-candles",
+    "Belkhayate Candles Style",
     candles_up_color = input { default = "#2CAC40", type=input.color },
     candles_down_color = input { default = "#DB4931", type=input.color },
     candles_visible = input { default = true, type=input.plot_visibility }
 }
 
 input_group {
-    "front.newind.lines",
+    "Lines",
     lines_color = input { default = rgba(255,255,255,0.15), type=input.color },
     lines_width = input { default = 1, type=input.line_width },
     lines_visible = input { default = true, type=input.plot_visibility }
 }
 
 input_group {
-    "front.newind.adx.fill",
+    "ADX Fill",
     fill_up_color = input { default = rgba(44,172,64,0.2), type=input.color },
     fill_down_color = input { default = rgba(219,73,49,0.2), type=input.color },
     fill_visible = input { default = true, type=input.plot_visibility }
 }
 
 input_group {
-    "front.platform.baseline",
+    "Baseline",
     zero_color = input { default = rgba(255,255,255,0.15), type=input.color },
     zero_width = input { default = 1, type=input.line_width },
     zero_visible = input { default = true, type=input.plot_visibility }

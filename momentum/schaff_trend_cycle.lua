@@ -3,21 +3,21 @@ instrument { name = "Schaff Trend Cycle" }
 
 input_group {
     "Relative Volatility",
-    period = input (10, "front.period", input.integer, 1),
+    period = input (10, "Period", input.integer, 1),
     short_cycle = input (23, "Short Cycle", input.integer, 1),
     long_cycle = input (50, "Long Cycle", input.integer, 1),
 
-    source = input (1, "front.ind.source", input.string_selection, inputs.titles),
-    fn     = input (averages.ema, "front.newind.smoothingfunction", input.string_selection, averages.titles),
+    source = input (1, "Source", input.string_selection, inputs.titles),
+    fn     = input (averages.ema, "Smoothing Function", input.string_selection, averages.titles),
 
     color  = input { default = "#DB4931", type = input.color },
     width  = input { default = 1, type = input.line_width}
 }
 
 input_group {
-    "front.newind.supportlines",
-    overbought = input (75, "front.overbought", input.double, 1, 100, 1, false),
-    oversold = input (25, "front.oversold", input.double, 1, 100, 1, false),
+    "Support Lines",
+    overbought = input (75, "Overbought", input.double, 1, 100, 1, false),
+    oversold = input (25, "Oversold", input.double, 1, 100, 1, false),
 
     zero_color = input { default = rgba(255,255,255,0.15), type = input.color },
     overbought_color  = input { default = rgba(37,225,84,0.50), type = input.color },
@@ -26,7 +26,7 @@ input_group {
 }
 
 input_group {
-    "front.newind.adx.fill",
+    "ADX Fill",
     fill_up_color = input { default = rgba(37,225,84,0.20), type = input.color },
     fill_down_color = input { default = rgba(255,108,88,0.20), type = input.color },
     fill_visible = input { default = true, type = input.plot_visibility }

@@ -1,18 +1,18 @@
 instrument { name = "ATR Bands", overlay = true, icon="indicators:ATR" }
 
-period = input (13, "front.period", input.integer, 1   )
-shift  = input (3, "front.newind.offset", input.double, 1   )
+period = input (13, "Period", input.integer, 1   )
+shift  = input (3, "Offset", input.double, 1   )
 
-source = input (1, "front.ind.source", input.string_selection, inputs.titles_overlay)
+source = input (1, "Source", input.string_selection, inputs.titles_overlay)
 
 input_group {
-    "front.newind.lines",
+    "Lines",
     color = input { default = rgba(75,255,181,0.7), type = input.color },
     width = input { default = 1, type = input.line_width}
 }
 
 input_group {
-    "front.newind.adx.fill",
+    "ADX Fill",
     fill_color = input { default = rgba(75,255,181,0.1), type = input.color },
     fill_visible = input { default = true, type = input.plot_visibility }
 }

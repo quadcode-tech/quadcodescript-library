@@ -36,17 +36,17 @@ input_group {
 }
 
 input_group {
-    "front.platform.signal-line",
-    signal_period = input (9, "front.period", input.integer, 1),
+    "Signal Line",
+    signal_period = input (9, "Period", input.integer, 1),
 
     signal_color  = input { default = "#2CAC40", type = input.color },
     signal_width  = input { default = 1, type = input.line_width}
 }
 
-source = input (1, "front.ind.source", input.string_selection,  inputs.titles)
+source = input (1, "Source", input.string_selection,  inputs.titles)
 
 input_group {
-    "front.platform.baseline",
+    "Baseline",
 
     zero_color = input { default = rgba(255,255,255,0.15), type = input.color },
     zero_width = input { default = 1, type = input.line_width },
@@ -69,4 +69,4 @@ if zero_visible then
 end
 
 plot (kst, "KST", kst_color, kst_width)
-plot (signal, "front.platform.signal-line", signal_color, signal_width)
+plot (signal, "Signal Line", signal_color, signal_width)

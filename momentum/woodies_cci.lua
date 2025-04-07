@@ -5,7 +5,7 @@ instrument {
 
 input_group {
     "CCI Turbo",
-    cci_turbo_period = input (6, "front.period", input.integer, 3, 14),
+    cci_turbo_period = input (6, "Period", input.integer, 3, 14),
 
     cci_turbo_color = input { default = "#2CAC40", type = input.color },
     cci_turbo_width = input { default = 1, type = input.line_width },
@@ -14,7 +14,7 @@ input_group {
 
 input_group {
     "CCI",
-    cci_period = input (14, "front.period", input.integer, 7, 20),
+    cci_period = input (14, "Period", input.integer, 7, 20),
 
     cci_color = input { default = "#DB4931", type = input.color },
     cci_width = input { default = 1, type = input.line_width },
@@ -31,16 +31,16 @@ input_group {
 }
 
 input_group {
-    "front.platform.baseline",
+    "Baseline",
     zero_line_visible = input { default = true, type = input.plot_visibility },
     zero_line_color   = input { default = rgba(255,255,255,0.15), type = input.color },
     zero_line_width   = input { default = 1, type = input.line_width }
 }
 
 input_group {
-    "front.newind.supportlines",
-    overbought = input (100, "front.overbought", input.double, 0, 500, 1, false),
-    oversold = input (-100, "front.oversold", input.double, -500, 0, 1, false),
+    "Support Lines",
+    overbought = input (100, "Overbought", input.double, 0, 500, 1, false),
+    oversold = input (-100, "Oversold", input.double, -500, 0, 1, false),
 
     overbought_color  = input { default = rgba(37,225,84,0.50), type = input.color },
     oversold_color  = input { default = rgba(255,108,88,0.50), type = input.color },
@@ -49,7 +49,7 @@ input_group {
     support_visible = input { default = true, type = input.plot_visibility }
 }
 
-src_idx = input (1, "front.ind.source", input.string_selection, inputs.titles)
+src_idx = input (1, "Source", input.string_selection, inputs.titles)
 local source = inputs [src_idx]
 
 cci_turbo = cci (source, cci_turbo_period)

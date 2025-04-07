@@ -5,21 +5,21 @@
 instrument { name = "Trend Intensity Index" }
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
 
-    major_period = input (60, "front.newind.tii.major_period", input.double, 2),
-    minor_period = input (30, "front.newind.tii.minor_period", input.double, 2),
+    major_period = input (60, "TII Major Period", input.double, 2),
+    minor_period = input (30, "TII Minor Period", input.double, 2),
 
-    source = input (1, "front.ind.source", input.string_selection, inputs.titles),
+    source = input (1, "Source", input.string_selection, inputs.titles),
 
     color  = input { default = "#DB4931", type = input.color },
     width  = input { default = 1, type = input.line_width}
 }
 
 input_group {
-    "front.newind.supportlines",
-    overbought = input (80, "front.overbought", input.double, 1, 100, 1, false),
-    oversold = input (20, "front.oversold", input.double, 1, 100, 1, false),
+    "Support Lines",
+    overbought = input (80, "Overbought", input.double, 1, 100, 1, false),
+    oversold = input (20, "Oversold", input.double, 1, 100, 1, false),
 
     zero_color = input { default = rgba(255,255,255,0.15), type = input.color },
     overbought_color  = input { default = rgba(37,225,84,0.50), type = input.color },

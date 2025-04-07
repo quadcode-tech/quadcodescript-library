@@ -1,6 +1,6 @@
 instrument { name = "Aroon" }
 
-period = input (14, "front.period", input.integer, 1, 200)
+period = input (14, "Period", input.integer, 1, 200)
 
 input_group {
     "Aroon Up",

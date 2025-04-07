@@ -3,7 +3,7 @@ instrument { name = "Accumulative Swing Index", overlay = false }
 limit  = input (0.5, "Limit Move Value", input.double, 0.01)
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
     color = input { default = "#57A1D0", type = input.color },
     width = input { default = 1, type = input.line_width}
 }

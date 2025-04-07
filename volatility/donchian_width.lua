@@ -1,9 +1,9 @@
 instrument { name = "Donchian Width", overlay = false }
 
-period = input (20, "front.period", input.integer, 1)
+period = input (20, "Period", input.integer, 1)
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
     color   = input { default = "#57A1D0", type = input.color },
     width   = input { default = 1, type = input.line_width }
 }

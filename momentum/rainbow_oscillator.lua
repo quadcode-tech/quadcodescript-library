@@ -1,31 +1,31 @@
 instrument { name = "Rainbow Oscillator" }
 
-period = input (2, "front.period", input.integer, 1)
+period = input (2, "Period", input.integer, 1)
 hh_period = input (10, "HH/LL Loockback", input.integer, 1)
 
-source = input (1, "front.ind.source", input.string_selection, inputs.titles)
+source = input (1, "Source", input.string_selection, inputs.titles)
 
 input_group {
-    "front.newind.barcolors",
+    "Bar Colors",
     up_color   = input { default = "#2CAC40", type = input.color },
     down_color = input { default = "#DB4931", type = input.color }
 }
 
 input_group {
-    "front.newind.lines",
+    "Lines",
     line_up_color = input { default = "#25E154", type = input.color },
     line_down_color = input { default = "#FF6C58", type = input.color },
     line_width = input { default = 1, type = input.line_width }
 }
 
 input_group {
-    "front.newind.adx.fill",
+    "ADX Fill",
     fill_up_color = input { default = rgba(37,225,84,0.2), type = input.color },
     fill_down_color = input { default = rgba(255,108,88,0.2), type = input.color }
 }
 
 input_group {
-    "front.platform.baseline",
+    "Baseline",
 
     zero_color = input { default = rgba(255,255,255,0.15), type = input.color },
     zero_width = input { default = 1, type = input.line_width },

@@ -1,10 +1,10 @@
 instrument { name = "Supertrend", overlay = true }
 
-period = input (7, "front.period", input.integer, 1)
-multiplier = input (3, "front.newind.multiplier", input.double, 0.01, 100, 0.01)
+period = input (7, "Period", input.integer, 1)
+multiplier = input (3, "Multiplier", input.double, 0.01, 100, 0.01)
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
     up_color = input { default = "#25E154", type = input.color },
     down_color = input { default = "#FF6C58", type = input.color },
     width = input { default = 1, type = input.line_width }

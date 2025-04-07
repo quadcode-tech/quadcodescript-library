@@ -1,17 +1,17 @@
 instrument { name = "Mass Index", overlay = false }
 
-period  = input (10, "front.period", input.integer, 1, 200)
-ema_period = input (9, "front.newind.emaperiod", input.integer, 1, 200)
+period  = input (10, "Period", input.integer, 1, 200)
+ema_period = input (9, "EMA Period", input.integer, 1, 200)
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
     color = input { default = "#4BFFB5", type = input.color },
     width = input { default = 1, type = input.line_width}
 }
 
 input_group {
-    "front.newind.bulge",
-    bulge = input (27, "front.value", input.double, 0),
+    "Bulge",
+    bulge = input (27, "Value", input.double, 0),
     bulge_color  = input { default = rgba(255,255,255,0.15), type = input.color },
     bulge_width  = input { default = 1, type = input.line_width}
 }

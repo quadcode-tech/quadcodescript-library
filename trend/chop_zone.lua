@@ -1,15 +1,15 @@
 instrument { name = "Chop Zone" }
 
-hh_period = input (30, "front.newind.chopzone.hhllperiod", input.integer, 1)
-ma_period = input (34, "front.newind.maperiod", input.integer, 1)
+hh_period = input (30, "HLL Period", input.integer, 1)
+ma_period = input (34, "MA Period", input.integer, 1)
 
-src_idx = input (inputs.close, "front.ind.source", input.string_selection, inputs.titles)
-avg_idx = input (inputs.hlc3, "front.newind.chopzone.smoothed", input.string_selection, inputs.titles)
+src_idx = input (inputs.close, "Source", input.string_selection, inputs.titles)
+avg_idx = input (inputs.hlc3, "Chop Zone Smoothed", input.string_selection, inputs.titles)
 
-fn     = input (averages.ema, "front.newind.average", input.string_selection, averages.titles)
+fn     = input (averages.ema, "Average", input.string_selection, averages.titles)
 
 input_group {
-    "front.newind.colors",
+    "Colors",
 
     color1 = input { default = rgba(86,206,255,0.75), type=input.color },
     color2 = input { default = rgba(24,114,38,0.75), type=input.color },

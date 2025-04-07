@@ -4,7 +4,7 @@ percentage = input (1, "Percentage", input.double, 0.01, 100, 1.0) / 100
 period = 3
 
 input_group {
-    "front.ind.dpo.generalline",
+    "General Line",
     up_color = input { default = "#FF7700", type = input.color },
     down_color = input { default = "#57A1D0", type = input.color },
     width = input { default = 1, type = input.line_width }

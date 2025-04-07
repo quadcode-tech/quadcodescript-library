@@ -2,10 +2,10 @@ instrument { name = "KDJ" }
 
 input_group {
     "%K",
-    k_period = input (9, "front.period", input.integer, 1),
-    smooth = input (3, "front.platform.smothing", input.integer, 1),
+    k_period = input (9, "Period", input.integer, 1),
+    smooth = input (3, "Smoothing", input.integer, 1),
 
-    source = input (1, "front.ind.source", input.string_selection, inputs.titles),
+    source = input (1, "Source", input.string_selection, inputs.titles),
 
     k_color  = input { default = "#FF7700", type = input.color },
     k_width  = input { default = 1, type = input.line_width}
@@ -13,7 +13,7 @@ input_group {
 
 input_group {
     "%D",
-    d_period = input (3, "front.period", input.integer, 1),
+    d_period = input (3, "Period", input.integer, 1),
 
     d_color  = input { default = "#25E154", type = input.color },
     d_width  = input { default = 1, type = input.line_width}
@@ -26,9 +26,9 @@ input_group {
 }
 
 input_group {
-    "front.newind.supportlines",
-    overbought = input (80, "front.overbought", input.double, 1, 100, 1, false),
-    oversold = input (20, "front.oversold", input.double, 1, 100, 1, false),
+    "Support Lines",
+    overbought = input (80, "Overbought", input.double, 1, 100, 1, false),
+    oversold = input (20, "Oversold", input.double, 1, 100, 1, false),
 
     overbought_color  = input { default = rgba(37,225,84,0.50), type = input.color },
     oversold_color  = input { default = rgba(255,108,88,0.50), type = input.color },

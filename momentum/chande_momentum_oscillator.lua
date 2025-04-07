@@ -1,16 +1,16 @@
 instrument { name = "Chande Momentum Oscillator", icon="indicators:RSI" }
 
 input_group {
-    "front.ind.dpo.generalline",
-    period = input (9, "front.period", input.integer, 1),
+    "General Line",
+    period = input (9, "Period", input.integer, 1),
     color  = input { default = "#57A1D0", type = input.color },
     width  = input { default = 1, type = input.line_width}
 }
 
 input_group {
-    "front.newind.supportlines",
-    overbought = input (50, "front.overbought", input.double, 0, 100, 1, false),
-    oversold = input (-50, "front.oversold", input.double, -100, 0, 1, false),
+    "Support Lines",
+    overbought = input (50, "Overbought", input.double, 0, 100, 1, false),
+    oversold = input (-50, "Oversold", input.double, -100, 0, 1, false),
 
     overbought_color  = input { default = rgba(37,225,84,0.50), type = input.color },
     oversold_color  = input { default = rgba(255,108,88,0.50), type = input.color },

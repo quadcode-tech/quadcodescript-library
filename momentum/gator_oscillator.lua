@@ -1,38 +1,38 @@
 instrument { name = "Gator Oscillator", icon="indicators:Alligator" }
 
 input_group {
-    "front.jaws",
-    jaws_period  = input (13, "front.period", input.integer, 1),
-    jaws_offset  = input (8, "front.newind.offset", input.integer, 1)
+    "Jaws",
+    jaws_period  = input (13, "Period", input.integer, 1),
+    jaws_offset  = input (8, "Offset", input.integer, 1)
 }
 
 input_group {
-    "front.teeth",
-    teeth_period  = input (8, "front.period", input.integer, 1),
-    teeth_offset  = input (5, "front.newind.offset", input.integer, 1)
+    "Teeth",
+    teeth_period  = input (8, "Period", input.integer, 1),
+    teeth_offset  = input (5, "Offset", input.integer, 1)
 }
 
 input_group {
-    "front.lips",
-    lips_period  = input (5, "front.period", input.integer, 1),
-    lips_offset  = input (3, "front.newind.offset", input.integer, 1)
+    "Lips",
+    lips_period  = input (5, "Period", input.integer, 1),
+    lips_offset  = input (3, "Offset", input.integer, 1)
 }
 
 input_group {
-    "front.newind.barcolors",
+    "Bar Colors",
     up_color   = input { default = "#2CAC40", type = input.color },
     down_color = input { default = "#DB4931", type = input.color }
 }
 
 input_group {
-    "front.platform.baseline",
+    "Baseline",
     zero_color = input { default = rgba(255,255,255,0.15), type = input.color },
     zero_width = input { default = 1, type = input.line_width },
     zero_visible = input { default = true, type = input.plot_visibility }
 }
 
-source = input (1, "front.ind.source", input.string_selection,  inputs.titles)
-fn     = input (averages.ssma, "front.newind.average", input.string_selection, averages.titles)
+source = input (1, "Source", input.string_selection,  inputs.titles)
+fn     = input (averages.ssma, "Average", input.string_selection, averages.titles)
 
 local sourceSeries = inputs [source]
 local averageFunction = averages [fn]
