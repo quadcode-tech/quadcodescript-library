@@ -1,0 +1,21 @@
+instrument {
+    name = 'X1 TRADERS 2025 - use heikinashi candle  -EFRAIMTRADERS',
+    icon = 'indicators:MA',
+    overlay = true
+}
+
+--local Hlv = 0.0
+
+len = 13
+smaHigh = sma(high, len)
+smaLow = sma(low, len)
+
+Hlv = iff(close > smaHigh , 1 ,iff( close < smaLow , -1 , Hlv[1]))
+sslDown = iff(Hlv < 0 , smaHigh , smaLow)
+sslUp   = iff(Hlv < 0 , smaLow , smaHigh)
+
+plot(sslDown, 'down', '#FF0000' , 4, -1, style.solid_line, na_mode.continue)
+plot(sslUp, 'up', '#00FF00' , 4, -1, style.solid_line, na_mode.continue)
+
+crossUp = sslUp > sslDown and sslUp[1] <= sslDown[1]
+crossDown = sslUp < sslDown and sslUp[1] >= sslDown[1]
