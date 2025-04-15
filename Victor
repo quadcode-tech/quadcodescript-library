@@ -1,0 +1,21 @@
+instrumento {
+    nombre = 'X1 TRADERS 2025 - usar vela heikinashi -EFRAIMTRADERS',
+    icono = 'indicadores:MA',
+    superposición = verdadero
+}
+
+--local Hlv = 0.0
+
+longitud = 13
+smaHigh = sma(alto, largo)
+smaLow = sma(bajo, largo)
+
+Hlv = iff(cerrar > smaHigh, 1, iff(cerrar < smaLow, -1, Hlv[1]))
+sslDown = si y solo si (Hlv < 0, smaHigh, smaLow)
+sslUp = si y solo si (Hlv < 0, smaLow, smaHigh)
+
+plot(sslDown, 'abajo', '#FF0000' , 4, -1, estilo.línea_sólida, modo_na.continuar)
+plot(sslUp, 'arriba', '#00FF00' , 4, -1, estilo.línea_sólida, modo_na.continuar)
+
+crossUp = sslUp > sslDown y sslUp[1] <= sslDown[1]
+crossDown = sslUp < sslDown y sslUp[1] >= sslDown[1]
